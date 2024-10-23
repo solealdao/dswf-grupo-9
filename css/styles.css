@@ -1,0 +1,247 @@
+/* Variables a reutilizar */
+:root {
+	/* Paleta de colores */
+	--color-primary: #595959;
+	--color-secondary: #c7a17a;
+	--color-background: #f0f0f0;
+	--color-background-dark: #111111;
+	--color-text-light: #ffffff;
+	--color-text-mid: #6c6b6b;
+	--color-text-dark: #333;
+
+	/* Tipografías */
+	--font-title: 'Oswald', sans-serif;
+	--font-body: 'Lato', sans-serif;
+}
+
+/*///////////////// ESTILOS GENERALES//////////////////*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--color-background);
+	color: var(--color-text-dark);
+}
+
+main {
+	padding-top: 4em;
+	min-height: 60vh;
+}
+
+/*----- Estilos para Header/Navbar -----*/
+.header-container {
+	font-family: var(--font-title);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5em 2em;
+	background-color: var(--color-background-dark);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 3;
+	transition: top 0.3s;
+}
+
+nav {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.nav-list {
+	list-style-type: none;
+	display: flex;
+	gap: 1.5em;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-list li {
+	display: inline;
+}
+
+.nav-list a {
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	transition: color 0.3s;
+}
+
+.nav-list a:hover {
+	color: var(--color-text-mid);
+}
+
+.logo-container {
+	display: flex;
+	justify-content: center;
+	margin-left: 3em;
+}
+.logo {
+	height: 3em;
+}
+
+/*----- Estilos para Footer -----*/
+footer {
+	background-color: var(--color-background-dark);
+	color: var(--color-text-light);
+}
+
+.footer-top-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 3em 2em;
+}
+
+.footer-logo-container {
+	margin-left: 3em;
+}
+
+.footer-logo {
+	height: 5em;
+}
+
+.footer-section h3,
+.footer-newsletter h3 {
+	color: var(--color-secondary);
+	font-family: var(--font-title);
+	margin-bottom: 0.5em;
+}
+
+.footer-links {
+	display: flex;
+	gap: 40px;
+}
+
+.footer-section {
+	padding: 0 4em;
+}
+.footer-section ul {
+	list-style: none;
+}
+
+.footer-section ul li {
+	margin-bottom: 1em;
+}
+
+.footer-section ul li a {
+	color: var(--color-text-mid);
+	font-family: var(--font-body);
+	text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+	color: var(--color-text-light);
+}
+
+.footer-newsletter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1em;
+	margin-right: 4em;
+}
+
+.newsletter-input-container {
+	display: flex;
+	font-family: var(--font-body);
+}
+
+.footer-newsletter input {
+	width: 100%;
+	color: var(--color-text-mid);
+	background-color: var(--color-background-dark);
+	padding: 1em;
+	border: 2px solid var(--color-text-mid);
+	border-right: none;
+	border-radius: 0;
+}
+
+.subscribe-button {
+	background-color: var(--color-secondary);
+	color: var(--color-text-dark);
+	font-weight: bold;
+	border: none;
+	padding: 1em 2em;
+	border-radius: 0;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.subscribe-button:hover {
+	background-color: var(--color-primary);
+}
+
+.footer-social-icons {
+	display: flex;
+	gap: 10px;
+}
+
+.footer-social-icons a {
+	color: var(--color-text-light);
+	background-color: var(--color-primary);
+	text-decoration: none;
+	font-size: 20px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	transition: background-color 0.3s;
+}
+
+.footer-social-icons a:hover {
+	background-color: var(--color-secondary);
+}
+
+.footer-divider {
+	border: none;
+	border-top: 2px solid var(--color-primary);
+}
+
+.footer-bottom-container {
+	color: var(--color-text-light);
+	font-family: var(--font-body);
+	padding: 2em 6em;
+	text-align: left;
+	font-size: 0.8em;
+	line-height: 1.6;
+}
+
+/*///////////////// ESTILOS PÁGINA INDEX//////////////////*/
+
+/*///////////////// ESTILOS PÁGINA CONTACTO//////////////////*/
+
+/*///////////////// ESTILOS PÁGINA FRANQUICIAS//////////////////*/
+
+/*///////////////// ESTILOS PÁGINA MENÚ-TIENDA//////////////////*/
+
+/*///////////////// ESTILOS PÁGINA TIENDA//////////////////*/
+
+/*///////////////// ESTILOS PÁGINA TRABAJA-EN-TDC//////////////////*/
+
+/*///////////////// ESTILOS PÁGINA TUTORIALES//////////////////*/
+
+/*///////////////// ESTILOS EN DISTINTOS DISPOSITIVOS//////////////////*/
+
+/*----- Tablet horizontal -----*/
+@media (max-width: 1080px) {
+}
+
+/*----- Tablet vertical ------*/
+@media (max-width: 768px) {
+}
+
+/*----- Mobil 1 -----*/
+@media (max-width: 480px) {
+}
+
+/*----- Mobil 2 -----*/
+@media (max-width: 375px) {
+}
