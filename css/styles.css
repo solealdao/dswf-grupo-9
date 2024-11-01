@@ -31,6 +31,22 @@ main {
 	min-height: 60vh;
 }
 
+.classic-button {
+	font-family: var(--font-body);
+	text-decoration: none;
+	color: var(--color-text-light);
+	border: 2px solid var(--color-text-mid);
+	font-weight: bold;
+	padding: 0.8em 2em;
+	margin: 1em 0;
+	width: fit-content;
+	cursor: pointer;
+	transition: border 0.3s;
+}
+.classic-button:hover {
+	border: 2px solid var(--color-text-light);
+}
+
 /*----- Estilos para Header/Navbar -----*/
 .header-container {
 	font-family: var(--font-title);
@@ -215,6 +231,133 @@ footer {
 }
 
 /*///////////////// ESTILOS PÁGINA INDEX//////////////////*/
+/* Sección Banner */
+.carousel {
+	position: relative;
+	width: 100%;
+	height: 70vh;
+	margin: auto;
+	overflow: hidden;
+}
+
+.carousel-container {
+	display: flex;
+	width: 100%;
+	transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+	min-width: 100%;
+	position: relative;
+}
+
+.carousel-slide img {
+	width: 100%;
+	display: block;
+}
+
+.carousel-text {
+	position: absolute;
+	top: 23%;
+	left: 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	color: var(--color-text-light);
+	padding: 1em;
+	max-width: 550px;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-text.active {
+	animation: slideUp 0.5s ease-out forwards;
+}
+
+.carousel-text .title-banner {
+	font-family: var(--font-title);
+	font-weight: 100;
+	margin: 0;
+	font-size: 2em;
+}
+
+.carousel-text h2 {
+	font-family: var(--font-title);
+	font-weight: 800;
+	margin: 0;
+	font-size: 4em;
+}
+
+.carousel-text h3 {
+	font-family: var(--font-body);
+	font-weight: 400;
+	font-size: 1em;
+	margin: 0.5em 0;
+}
+
+.carousel-navigation .prev,
+.carousel-navigation .next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%) translateX(-100%);
+	color: var(--color-text-light);
+	font-size: 1.8em;
+	cursor: pointer;
+	padding: 10px;
+	opacity: 0;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.carousel:hover .carousel-navigation .prev {
+	transform: translateY(-50%) translateX(0);
+	opacity: 1;
+}
+
+.carousel:hover .carousel-navigation .next {
+	transform: translateY(-50%) translateX(0);
+	opacity: 1;
+}
+
+.carousel-navigation .prev {
+	left: 1.5em;
+}
+
+.carousel-navigation .next {
+	transform: translateY(-50%) translateX(100%);
+	right: 1.5em;
+}
+
+.carousel-indicators {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 10px;
+}
+
+.carousel-indicators .dot {
+	width: 15px;
+	height: 15px;
+	background-color: var(--color-text-mid);
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.carousel-indicators .dot.active {
+	background-color: var(--color-text-light);
+}
+
+@keyframes slideUp {
+	from {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 
 /*///////////////// ESTILOS PÁGINA CONTACTO//////////////////*/
 .container {
@@ -223,26 +366,32 @@ footer {
 }
 .leftColumn,
 .rightColumn {
-    flex: 1; 
-	padding: 30px 40px; 
+	flex: 1;
+	padding: 30px 40px;
 	min-width: 50%;
 }
 
 .leftColumn {
-    display: flex;
-    flex-direction: column;  
-    align-items: baseline;
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
 	border-right: 1px solid transparent;
-    background: linear-gradient(to bottom, transparent 10%, lightgray 10%, lightgray 90%, transparent 90%);
-    background-size: 1px 100%; 
-    background-repeat: no-repeat;
-    background-position: right center;
+	background: linear-gradient(
+		to bottom,
+		transparent 10%,
+		lightgray 10%,
+		lightgray 90%,
+		transparent 90%
+	);
+	background-size: 1px 100%;
+	background-repeat: no-repeat;
+	background-position: right center;
 }
 
 .rightColumn {
-    display: flex;
-    flex-direction: column;    
-    align-items: flex-start;  
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 .contactTitle {
@@ -265,14 +414,14 @@ footer {
 }
 
 .lineContainer {
-	flex-direction: column; 
-	flex: 1; 
-    align-content: center;
+	flex-direction: column;
+	flex: 1;
+	align-content: center;
 }
 
 .h4Container {
 	flex-direction: column;
-	flex: 1; 
+	flex: 1;
 }
 
 .hrStyles {
@@ -283,7 +432,7 @@ footer {
 }
 
 .form {
-	display:flex ;
+	display: flex;
 	flex-direction: column;
 }
 
@@ -300,7 +449,7 @@ footer {
 }
 
 input:focus {
-    outline: none;
+	outline: none;
 }
 
 .buttonStyles {
@@ -320,56 +469,55 @@ input:focus {
 	height: 90px;
 	font-size: 40px;
 }
-.iconStyles:hover{
+.iconStyles:hover {
 	color: var(--color-primary);
 }
 
 /*///////////////// ESTILOS PÁGINA FRANQUICIAS//////////////////*/
-.franchise-heading{
+.franchise-heading {
 	text-align: center;
 }
-.franchise-subtitle{
+.franchise-subtitle {
 	font-size: 16px;
 	line-height: 20px;
-	color: var(	--color-secondary);
+	color: var(--color-secondary);
 	margin: 35px auto 25px;
 	font-family: var(--font-body);
 	font-weight: 300;
 }
-.franchise-title{
+.franchise-title {
 	font-size: 36px;
 	line-height: 40px;
-	font-family: "Oswald";
+	font-family: 'Oswald';
 	color: var(--color-text-dark);
 	font-weight: 700;
 	margin-bottom: 25px;
 }
-.franchise-divider-line{
+.franchise-divider-line {
 	border: none;
-    height: 2px; /* Ajusta el grosor de la línea */
-    background-color: var(	--color-secondary);
-    width: 115px; /* Ajusta el ancho de la línea */
-    margin: 10px auto; /* Centra la línea horizontalmente y ajusta el espacio alrededor */
+	height: 2px; /* Ajusta el grosor de la línea */
+	background-color: var(--color-secondary);
+	width: 115px; /* Ajusta el ancho de la línea */
+	margin: 10px auto; /* Centra la línea horizontalmente y ajusta el espacio alrededor */
 }
-.franchise-description{
+.franchise-description {
 	margin-top: 30px;
 	font-family: var(--font-body);
 	color: var(--color-text-mid);
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 80%;
-
 }
 .no-line {
-    border-right: none;
-    background: none;
+	border-right: none;
+	background: none;
 }
-.inputStyleFranchise{
+.inputStyleFranchise {
 	width: 100%;
 	height: 3em;
 }
-.containerButton{
- margin: auto 40px 30px;
+.containerButton {
+	margin: auto 40px 30px;
 }
 
 /*///////////////// ESTILOS PÁGINA MENÚ-TIENDA//////////////////*/
@@ -377,15 +525,13 @@ input:focus {
 /*///////////////// ESTILOS PÁGINA TIENDA//////////////////*/
 
 /*///////////////// ESTILOS PÁGINA TRABAJA-EN-TDC//////////////////*/
-.textareaTCV{
-	
+.textareaTCV {
 }
-.containerMensaje{
+.containerMensaje {
 	display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+	flex-direction: column;
+	align-items: flex-start;
 	margin: 0px 40px 30px;
-
 }
 /*///////////////// ESTILOS PÁGINA TUTORIALES//////////////////*/
 

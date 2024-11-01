@@ -42,7 +42,56 @@
 
 		<!-- Contenido de página -->
 		<main>
-			<h1>Home de vinitosss</h1>
+			<!-- Sección Banner -->
+			<section class="carousel">
+				<div class="carousel-container">
+					<!-- Slide 1 -->
+					<div class="carousel-slide">
+						<img src="../assets/img/slide-1.jpg" alt="Imagen 1" />
+						<div class="carousel-text">
+							<h2 class="title-banner">Tu vino preferido</h2>
+							<h2>SIEMPRE CERCA</h2>
+							<h3>
+								Blends, varietales, vinos del mundo. Encontrá tu bodega
+								más cercana y tentate con nuestros sabores.
+							</h3>
+							<a href="#" class="classic-button">ENCONTRANOS</a>
+						</div>
+					</div>
+					<!-- Slide 2 -->
+					<div class="carousel-slide">
+						<img src="../assets/img/slide-2.jpg" alt="Imagen 2" />
+						<div class="carousel-text">
+							<h2 class="title-banner">Probá nuestras</h2>
+							<h2>SELECCIONES</h2>
+							<h3>100% varietales, ideales para cada ocasión</h3>
+							<a href="#" class="classic-button">DESCUBRILAS</a>
+						</div>
+					</div>
+					<!-- Slide 3 -->
+					<div class="carousel-slide">
+						<img src="../assets/img/slide-3.jpg" alt="Imagen 3" />
+						<div class="carousel-text">
+							<h2 class="title-banner">Desde 2007</h2>
+							<h2>CREANDO TUS VINOS</h2>
+							<h3>
+								Años de experiencia cuidando cada paso del proceso.
+							</h3>
+						</div>
+					</div>
+				</div>
+
+				<div class="carousel-navigation">
+					<span class="prev">&#10094;</span>
+					<span class="next">&#10095;</span>
+				</div>
+
+				<div class="carousel-indicators">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+				</div>
+			</section>
 		</main>
 
 		<!-- Footer -->
@@ -102,4 +151,47 @@
 			</div>
 		</footer>
 	</body>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			let slideIndex = 0;
+			const slides = document.querySelectorAll('.carousel-slide');
+			const dots = document.querySelectorAll('.carousel-indicators .dot');
+
+			function showSlide(index) {
+				if (index >= slides.length) slideIndex = 0;
+				if (index < 0) slideIndex = slides.length - 1;
+
+				slides.forEach((slide) => {
+					slide.style.display = 'none';
+					slide.querySelector('.carousel-text').classList.remove('active');
+				});
+				dots.forEach((dot) => dot.classList.remove('active'));
+				slides[slideIndex].style.display = 'block';
+				slides[slideIndex]
+					.querySelector('.carousel-text')
+					.classList.add('active');
+				dots[slideIndex].classList.add('active');
+			}
+
+			showSlide(slideIndex);
+
+			function nextSlide() {
+				showSlide(++slideIndex);
+			}
+
+			function prevSlide() {
+				showSlide(--slideIndex);
+			}
+
+			document.querySelector('.next').addEventListener('click', nextSlide);
+			document.querySelector('.prev').addEventListener('click', prevSlide);
+
+			dots.forEach((dot, i) => {
+				dot.addEventListener('click', () => {
+					slideIndex = i;
+					showSlide(slideIndex);
+				});
+			});
+		});
+	</script>
 </html>
