@@ -320,15 +320,73 @@ input:focus {
 	height: 90px;
 	font-size: 40px;
 }
+.iconStyles:hover{
+	color: var(--color-primary);
+}
 
 /*///////////////// ESTILOS PÁGINA FRANQUICIAS//////////////////*/
+.franchise-heading{
+	text-align: center;
+}
+.franchise-subtitle{
+	font-size: 16px;
+	line-height: 20px;
+	color: var(	--color-secondary);
+	margin: 35px auto 25px;
+	font-family: var(--font-body);
+	font-weight: 300;
+}
+.franchise-title{
+	font-size: 36px;
+	line-height: 40px;
+	font-family: "Oswald";
+	color: var(--color-text-dark);
+	font-weight: 700;
+	margin-bottom: 25px;
+}
+.franchise-divider-line{
+	border: none;
+    height: 2px; /* Ajusta el grosor de la línea */
+    background-color: var(	--color-secondary);
+    width: 115px; /* Ajusta el ancho de la línea */
+    margin: 10px auto; /* Centra la línea horizontalmente y ajusta el espacio alrededor */
+}
+.franchise-description{
+	margin-top: 30px;
+	font-family: var(--font-body);
+	color: var(--color-text-mid);
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 80%;
+
+}
+.no-line {
+    border-right: none;
+    background: none;
+}
+.inputStyleFranchise{
+	width: 100%;
+	height: 3em;
+}
+.containerButton{
+ margin: auto 40px 30px;
+}
 
 /*///////////////// ESTILOS PÁGINA MENÚ-TIENDA//////////////////*/
 
 /*///////////////// ESTILOS PÁGINA TIENDA//////////////////*/
 
 /*///////////////// ESTILOS PÁGINA TRABAJA-EN-TDC//////////////////*/
+.textareaTCV{
+	
+}
+.containerMensaje{
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+	margin: 0px 40px 30px;
 
+}
 /*///////////////// ESTILOS PÁGINA TUTORIALES//////////////////*/
 
 /*///////////////// ESTILOS EN DISTINTOS DISPOSITIVOS//////////////////*/
