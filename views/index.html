@@ -92,6 +92,154 @@
 					<span class="dot"></span>
 				</div>
 			</section>
+
+			<!-- Sección Slider de productos -->
+			<section id="product-slider" class="slider">
+				<h2>NUESTROS PRODUCTOS</h2>
+				<div class="line"></div>
+				<div class="slider-container">
+					<div class="slider-wrapper">
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-1.jpg"
+									alt="Producto 1"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Tinto</h3>
+									<p>Descripción del producto 1</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-2.jpg"
+									alt="Producto 2"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Blanco</h3>
+									<p>Descripción del producto 2</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-3.jpg"
+									alt="Producto 3"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Blanco</h3>
+									<p>Descripción del producto 2</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-4.jpg"
+									alt="Producto 4"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Blanco</h3>
+									<p>Descripción del producto 2</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-5.jpg"
+									alt="Producto 5"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Blanco</h3>
+									<p>Descripción del producto 2</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-6.jpg"
+									alt="Producto 6"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Blanco</h3>
+									<p>Descripción del producto 2</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-7.jpg"
+									alt="Producto 7"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Blanco</h3>
+									<p>Descripción del producto 2</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-8.jpg"
+									alt="Producto 8"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Blanco</h3>
+									<p>Descripción del producto 2</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-9.jpg"
+									alt="Producto 9"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Blanco</h3>
+									<p>Descripción del producto 2</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-10.jpg"
+									alt="Producto 10"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Blanco</h3>
+									<p>Descripción del producto 2</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="arrows">
+					<button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+					<button class="next" onclick="moveSlide(1)">&#10095;</button>
+				</div>
+				<div class="dots">
+					<span class="dot"></span>
+					<span class="dot"></span>
+				</div>
+			</section>
 		</main>
 
 		<!-- Footer -->
@@ -150,48 +298,111 @@
 				</p>
 			</div>
 		</footer>
-	</body>
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			let slideIndex = 0;
-			const slides = document.querySelectorAll('.carousel-slide');
-			const dots = document.querySelectorAll('.carousel-indicators .dot');
 
-			function showSlide(index) {
-				if (index >= slides.length) slideIndex = 0;
-				if (index < 0) slideIndex = slides.length - 1;
+		<script>
+			// Script para el Banner
+			document.addEventListener('DOMContentLoaded', function () {
+				let slideIndex = 0;
+				const slides = document.querySelectorAll('.carousel-slide');
+				const dots = document.querySelectorAll('.carousel-indicators .dot');
 
-				slides.forEach((slide) => {
-					slide.style.display = 'none';
-					slide.querySelector('.carousel-text').classList.remove('active');
-				});
-				dots.forEach((dot) => dot.classList.remove('active'));
-				slides[slideIndex].style.display = 'block';
-				slides[slideIndex]
-					.querySelector('.carousel-text')
-					.classList.add('active');
-				dots[slideIndex].classList.add('active');
-			}
+				function showSlide(index) {
+					if (index >= slides.length) slideIndex = 0;
+					if (index < 0) slideIndex = slides.length - 1;
 
-			showSlide(slideIndex);
+					slides.forEach((slide) => {
+						slide.style.display = 'none';
+						slide
+							.querySelector('.carousel-text')
+							.classList.remove('active');
+					});
+					dots.forEach((dot) => dot.classList.remove('active'));
+					slides[slideIndex].style.display = 'block';
+					slides[slideIndex]
+						.querySelector('.carousel-text')
+						.classList.add('active');
+					dots[slideIndex].classList.add('active');
+				}
 
-			function nextSlide() {
-				showSlide(++slideIndex);
-			}
+				showSlide(slideIndex);
 
-			function prevSlide() {
-				showSlide(--slideIndex);
-			}
+				function nextSlide() {
+					showSlide(++slideIndex);
+				}
 
-			document.querySelector('.next').addEventListener('click', nextSlide);
-			document.querySelector('.prev').addEventListener('click', prevSlide);
+				function prevSlide() {
+					showSlide(--slideIndex);
+				}
 
-			dots.forEach((dot, i) => {
-				dot.addEventListener('click', () => {
-					slideIndex = i;
-					showSlide(slideIndex);
+				document
+					.querySelector('.next')
+					.addEventListener('click', nextSlide);
+				document
+					.querySelector('.prev')
+					.addEventListener('click', prevSlide);
+
+				dots.forEach((dot, i) => {
+					dot.addEventListener('click', () => {
+						slideIndex = i;
+						showSlide(slideIndex);
+					});
 				});
 			});
-		});
-	</script>
+
+			// // Script para el slider de productos
+			let productSlideIndex = 0;
+			const productsPerPage = 5;
+			const totalProducts = 10;
+
+			function showProductSlide() {
+				const sliderWrapper = document.querySelector('.slider-wrapper');
+
+				const offset = -(
+					productSlideIndex *
+					(100 / (totalProducts / productsPerPage))
+				);
+
+				sliderWrapper.style.transform = `translateX(${offset}%)`;
+				updateDots();
+			}
+
+			function moveSlide(n) {
+				productSlideIndex += n;
+
+				if (productSlideIndex >= totalProducts / productsPerPage) {
+					productSlideIndex = 0;
+				} else if (productSlideIndex < 0) {
+					productSlideIndex = totalProducts / productsPerPage - 1;
+				}
+
+				showProductSlide();
+			}
+
+			function currentSlide(n) {
+				productSlideIndex = n;
+				showProductSlide();
+			}
+
+			function updateDots() {
+				const productDots = document.querySelectorAll('.dots .dot');
+
+				productDots.forEach((dot) => dot.classList.remove('active'));
+
+				productDots[productSlideIndex].classList.add('active');
+			}
+
+			document
+				.querySelector('.next')
+				.addEventListener('click', () => moveSlide(1));
+			document
+				.querySelector('.prev')
+				.addEventListener('click', () => moveSlide(-1));
+
+			const productDots = document.querySelectorAll('.dots .dot');
+			productDots.forEach((dot, index) => {
+				dot.addEventListener('click', () => currentSlide(index));
+			});
+			showProductSlide();
+		</script>
+	</body>
 </html>
