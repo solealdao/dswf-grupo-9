@@ -42,7 +42,317 @@
 
 		<!-- Contenido de página -->
 		<main>
-			<h1>Home de vinitosss</h1>
+			<!-- Sección Banner -->
+			<section class="carousel">
+				<div class="carousel-container">
+					<!-- Slide 1 -->
+					<div class="carousel-slide">
+						<img src="../assets/img/slide-1.jpg" alt="Imagen 1" />
+						<div class="carousel-text">
+							<h2 class="title-banner">Tu vino preferido</h2>
+							<h2>SIEMPRE CERCA</h2>
+							<h3>
+								Blends, varietales, vinos del mundo. Encontrá tu bodega
+								más cercana y tentate con nuestros sabores.
+							</h3>
+							<a href="#" class="classic-button">ENCONTRANOS</a>
+						</div>
+					</div>
+					<!-- Slide 2 -->
+					<div class="carousel-slide">
+						<img src="../assets/img/slide-2.jpg" alt="Imagen 2" />
+						<div class="carousel-text">
+							<h2 class="title-banner">Probá nuestras</h2>
+							<h2>SELECCIONES</h2>
+							<h3>100% varietales, ideales para cada ocasión</h3>
+							<a href="#" class="classic-button">DESCUBRILAS</a>
+						</div>
+					</div>
+					<!-- Slide 3 -->
+					<div class="carousel-slide">
+						<img src="../assets/img/slide-3.jpg" alt="Imagen 3" />
+						<div class="carousel-text">
+							<h2 class="title-banner">Desde 2007</h2>
+							<h2>CREANDO TUS VINOS</h2>
+							<h3>
+								Años de experiencia cuidando cada paso del proceso.
+							</h3>
+						</div>
+					</div>
+				</div>
+
+				<div class="carousel-navigation">
+					<span class="prev">&#10094;</span>
+					<span class="next">&#10095;</span>
+				</div>
+
+				<div class="carousel-indicators">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+				</div>
+			</section>
+
+			<!-- Sección Slider de productos -->
+			<section id="product-slider" class="slider">
+				<h2>NUESTROS PRODUCTOS</h2>
+				<div class="line"></div>
+				<div class="slider-container">
+					<div class="slider-wrapper">
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-1.jpg"
+									alt="Producto 1"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Tinto</h3>
+									<p>Descripción del producto 1</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-2.jpg"
+									alt="Producto 2"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Blanco</h3>
+									<p>Descripción del producto 2</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-3.jpg"
+									alt="Producto 3"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Blanco</h3>
+									<p>Descripción del producto 2</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-4.jpg"
+									alt="Producto 4"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Blanco</h3>
+									<p>Descripción del producto 2</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-5.jpg"
+									alt="Producto 5"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Blanco</h3>
+									<p>Descripción del producto 2</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-6.jpg"
+									alt="Producto 6"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Blanco</h3>
+									<p>Descripción del producto 2</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-7.jpg"
+									alt="Producto 7"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Blanco</h3>
+									<p>Descripción del producto 2</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-8.jpg"
+									alt="Producto 8"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Blanco</h3>
+									<p>Descripción del producto 2</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-9.jpg"
+									alt="Producto 9"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Blanco</h3>
+									<p>Descripción del producto 2</p>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-content">
+								<img
+									src="../assets/img/vino-10.jpg"
+									alt="Producto 10"
+									class="card-image"
+								/>
+								<div class="info">
+									<h3>Vino Blanco</h3>
+									<p>Descripción del producto 2</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="arrows">
+					<button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+					<button class="next" onclick="moveSlide(1)">&#10095;</button>
+				</div>
+				<div class="dots">
+					<span class="dot"></span>
+					<span class="dot"></span>
+				</div>
+			</section>
+
+			<!-- Sección Nuestros tutoriales -->
+			<section class="tutorials-section">
+				<div class="tutorial-card">
+					<div class="tutorial-card-content">
+						<h3 class="card-subtitle">
+							Aprendé a catar tu vino como un experto
+						</h3>
+						<h2 class="card-title">SECRETOS DEL ENÓLOGO</h2>
+						<a href="#" class="tutorial-button">VER</a>
+					</div>
+				</div>
+				<div class="tutorial-card">
+					<div class="tutorial-card-content">
+						<h3 class="card-subtitle">
+							Conocé todo lo que podés encontrar en nuestros locales
+						</h3>
+						<h2 class="card-title">NUESTROS VINOS</h2>
+						<a href="#" class="tutorial-button">VER</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Sección Nuestros Vino -->
+			<section class="our-wine">
+				<h5>NUESTRO VINO</h5>
+				<h2>¿CUÁL VAS A ELEGIR HOY?</h2>
+				<div class="line"></div>
+				<div class="our-wine-container">
+					<div class="text-column right-aligned">
+						<div class="our-wine-text">
+							<h3>GRAN RESERVA</h3>
+							<p>
+								Nuestro vino insignia, el orgullo de la casa. Una mezcla
+								de uvas seleccionadas de los viñedos más antiguos,
+								provenientes de Mendoza, Argentina. Un vino de cuerpo
+								robusto, taninos suaves y un aroma intenso. Ideal para
+								disfrutar en casa, creando un ambiente de bodega en tu
+								propio espacio.
+							</p>
+						</div>
+						<div class="our-wine-text">
+							<h3>TRES VARIETALES</h3>
+							<p>
+								Una combinación excepcional de tres varietales: Malbec,
+								Cabernet Sauvignon y Syrah. Este vino de cuerpo medio
+								destaca por su estructura y complejidad, con notas de
+								frutas rojas y un toque sutil de especias.
+							</p>
+						</div>
+						<div class="our-wine-text">
+							<h3>VIEJO ROBLE</h3>
+							<p>
+								Nuestro blend más intenso y de carácter especiado. Con
+								un sabor profundo y un cuerpo robusto, este vino es
+								ideal para quienes buscan una experiencia fuerte e
+								inolvidable. Un favorito entre los amantes del vino con
+								personalidad.
+							</p>
+						</div>
+					</div>
+
+					<div class="central-image">
+						<img
+							src="../assets/img/our-wine.jpg"
+							alt="Imagen de nuestro vino"
+						/>
+					</div>
+
+					<div class="text-column left-aligned">
+						<div class="our-wine-text">
+							<h3>CIELO ANDINO</h3>
+							<p>
+								Un varietal clásico que rinde homenaje a los paisajes
+								montañosos. Con cuerpo suave y notas de frutas maduras,
+								tiene un aroma floral y una acidez equilibrada.
+								Sumérgete en la experiencia de las tierras altas con
+								cada copa.
+							</p>
+						</div>
+						<div class="our-wine-text">
+							<h3>SUAVE SELECCIÓN</h3>
+							<p>
+								Para quienes desean disfrutar de un buen vino con menos
+								contenido alcohólico, este blend es perfecto. Originario
+								de los viñedos de Chile, tiene un cuerpo ligero y un
+								suave aroma a frutas. Ideal para aquellos que prefieren
+								una opción más liviana y equilibrada.
+							</p>
+						</div>
+						<div class="our-wine-text">
+							<h3>TIERRA BRASILEÑA</h3>
+							<p>
+								Un vino de cuerpo suave, con baja acidez y un sabor
+								delicado. Perfecto para quienes buscan una experiencia
+								sutil, este vino es ideal para acompañar momentos de
+								relajación o maridajes ligeros.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Sección Encontrá tu tienda -->
+			<section class="store-finder">
+				<div class="background-image"></div>
+				<div class="overlay">
+					<p class="pre-title">SIEMPRE HAY UNA</p>
+					<h2 class="title">TIENDA CERCA TUYO</h2>
+					<p class="subtitle">Encontrá nuestra sucursal más cercana.</p>
+					<button class="classic-button">INGRESAR</button>
+				</div>
+			</section>
 		</main>
 
 		<!-- Footer -->
@@ -101,5 +411,111 @@
 				</p>
 			</div>
 		</footer>
+
+		<script>
+			// Script para el Banner
+			document.addEventListener('DOMContentLoaded', function () {
+				let slideIndex = 0;
+				const slides = document.querySelectorAll('.carousel-slide');
+				const dots = document.querySelectorAll('.carousel-indicators .dot');
+
+				function showSlide(index) {
+					if (index >= slides.length) slideIndex = 0;
+					if (index < 0) slideIndex = slides.length - 1;
+
+					slides.forEach((slide) => {
+						slide.style.display = 'none';
+						slide
+							.querySelector('.carousel-text')
+							.classList.remove('active');
+					});
+					dots.forEach((dot) => dot.classList.remove('active'));
+					slides[slideIndex].style.display = 'block';
+					slides[slideIndex]
+						.querySelector('.carousel-text')
+						.classList.add('active');
+					dots[slideIndex].classList.add('active');
+				}
+
+				showSlide(slideIndex);
+
+				function nextSlide() {
+					showSlide(++slideIndex);
+				}
+
+				function prevSlide() {
+					showSlide(--slideIndex);
+				}
+
+				document
+					.querySelector('.next')
+					.addEventListener('click', nextSlide);
+				document
+					.querySelector('.prev')
+					.addEventListener('click', prevSlide);
+
+				dots.forEach((dot, i) => {
+					dot.addEventListener('click', () => {
+						slideIndex = i;
+						showSlide(slideIndex);
+					});
+				});
+			});
+
+			// // Script para el slider de productos
+			let productSlideIndex = 0;
+			const productsPerPage = 5;
+			const totalProducts = 10;
+
+			function showProductSlide() {
+				const sliderWrapper = document.querySelector('.slider-wrapper');
+
+				const offset = -(
+					productSlideIndex *
+					(100 / (totalProducts / productsPerPage))
+				);
+
+				sliderWrapper.style.transform = `translateX(${offset}%)`;
+				updateDots();
+			}
+
+			function moveSlide(n) {
+				productSlideIndex += n;
+
+				if (productSlideIndex >= totalProducts / productsPerPage) {
+					productSlideIndex = 0;
+				} else if (productSlideIndex < 0) {
+					productSlideIndex = totalProducts / productsPerPage - 1;
+				}
+
+				showProductSlide();
+			}
+
+			function currentSlide(n) {
+				productSlideIndex = n;
+				showProductSlide();
+			}
+
+			function updateDots() {
+				const productDots = document.querySelectorAll('.dots .dot');
+
+				productDots.forEach((dot) => dot.classList.remove('active'));
+
+				productDots[productSlideIndex].classList.add('active');
+			}
+
+			document
+				.querySelector('.next')
+				.addEventListener('click', () => moveSlide(1));
+			document
+				.querySelector('.prev')
+				.addEventListener('click', () => moveSlide(-1));
+
+			const productDots = document.querySelectorAll('.dots .dot');
+			productDots.forEach((dot, index) => {
+				dot.addEventListener('click', () => currentSlide(index));
+			});
+			showProductSlide();
+		</script>
 	</body>
 </html>
