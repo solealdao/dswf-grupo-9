@@ -42,8 +42,8 @@
 
 <!-- Contenido de la pagina -->
 <main>
-	<div class="container">
-		<div class="leftColumn">
+	<div class="containerform">
+		<div class="leftColumn padding-vertical">
 			<div>
 				<div class="titleContainer">
 					<div class="h4Container">
@@ -62,16 +62,16 @@
 				<div>
 					<form class="form">
 						<label class="labelStyles" for="nombre">Nombre</label>
-						<input class="inputStyles" type="text" id="nombre">
+						<input class="inputStyles" type="text" id="nombre" required>
 						
 						<label class="labelStyles" for="email">E-mail</label>
-						<input class="inputStyles" type="email" id="email">
+						<input class="inputStyles" type="email" id="email" required>
 						
 						<label class="labelStyles" for="asunto">Asunto</label>
-						<input class="inputStyles" type="text" id="asunto">
+						<input class="inputStyles" type="text" id="asunto" required>
 						
 						<label class="labelStyles" for="mensaje">Mensaje</label>
-						<input class="inputStyles" style="min-height: 170px;" type="text" id="mensaje">
+						<textarea name="" id="" class="inputStyles textareaTCV"></textarea>
 						
 						<button class="buttonStyles" type="submit">ENVIAR</button>
 					</form>
@@ -79,7 +79,7 @@
 			</div>
 		</div>
 		
-		<div class="rightColumn">
+		<div class="rightColumn padding-vertical">
 			<div class="titleContainer">
 				<div class="h4Container">
 					<h4 class="contactTitle">NUESTRAS REDES SOCIALES</h4>
