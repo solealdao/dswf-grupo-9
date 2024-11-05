@@ -728,6 +728,7 @@ footer {
 	display: inline-flex;
 	min-width: 100%;
 	flex-wrap: wrap;
+
 }
 
 .leftColumn,
@@ -922,26 +923,99 @@ input[type=file]{
 
 /*----- Tablet horizontal -----*/
 @media (max-width: 1080px) {
+	
 }
 
 /*----- Tablet vertical ------*/
 @media (max-width: 768px) {
+	/*
+	.footer-top-container{
+		display: block;
+	}
+	.footer-links{
+		display: block;
+
+	}*/ 
+	
 	.containerform{
 		display: block;
+		
 	}
 	.leftColumn {
 		background: none;	
 	}
+	.leftColumn, .rightColumn{
+		min-width: 100%;
+		width: 100%;
+		flex: none;
+		padding: 0px 15px;
+	}
+	.padding-vertical{
+		padding-bottom: 10px !important;
+		padding-top: 5px !important;
+	}
+	.titleContainer{
+       padding-top: 60px;
+	}
+	
+	.textareaTCV {
+		padding: 10px 15px;
+		width: 100%;
+	}
+	.containerMensaje{
+		margin: 5px 0px;
+		padding: 0px 15px;
+	}
+	.containerButton{
+		margin: auto 0px 30px 0px;
+		padding-left: 15px;
+	}
+	.franchiseAndTDC-description{
+		font-size: 14px;
+		max-width: 75%;
+		line-height: 24px;
+	}
+	
 }
 
 /*----- Mobil 1 -----*/
 @media (max-width: 480px) {
+	.franchiseAndTDC-subtitle{
+		margin-top: 60px;
+	}
+	.franchiseAndTDC-title{
+		font-size: 30px;
+		}
 
+	.franchiseAndTDC-description{
+     max-width: 85%;
+	}
+	.contactTitle{
+		font-size: 24px;
+		line-height: 34px;
+		text-align: left;
+		
+	}
+	.titleContainer{
+		display: flex;
+		padding-top: 40px;
+	}
+	.h4Container {
+		flex: 0 0 60%; /* Ocupa el 70% del ancho del contenedor */
+		text-align: left; /* Alinea el título a la izquierda, si es necesario */
+	}
+
+	.lineContainer {
+		flex: 0 0 40%; /* Ocupa el 30% del ancho del contenedor */
+	}
+
+	.buttonStyles{
+		margin-bottom: 15px;
+	}
 }
 
 /*----- Mobil 2 -----*/
 @media (max-width: 375px) {
-	.franchiseAndTDC-title{
-font-size: 30px;
-	}
+	
+	
 }
