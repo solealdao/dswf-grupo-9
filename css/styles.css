@@ -1035,13 +1035,14 @@ hr {
 /*----- Tablet vertical ------*/
 @media (max-width: 768px) {
 	/*--- Paginas Formularios ---*/
+	/*
 	.footer-top-container{
 		display: block;
 	}
 	.footer-links{
 		display: block;
 
-	}
+	}*/
 	.h4Container {
 		flex: 0 0 45%; 
 	}
