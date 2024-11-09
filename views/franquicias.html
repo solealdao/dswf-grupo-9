@@ -18,14 +18,21 @@
 		<!-- Navbar -->
 		<header>
 			<div class="header-container">
+				<button class="menu-toggle" aria-label="Abrir menú">
+					<span class="hamburger-icon"></span>
+				</button>
+
 				<div class="logo-container">
-					<img
-						src="../assets/img/logo.png"
-						alt="Logo Tienda de Vinos"
-						class="logo"
-					/>
+					<a href="index.html"
+						><img
+							src="../assets/img/logo.png"
+							alt="Logo Tienda de Vinos"
+							class="logo"
+						/>
+					</a>
 				</div>
-				<nav>
+
+				<nav class="nav-menu">
 					<ul class="nav-list">
 						<li><a href="tienda.html">NUESTRO VINO</a></li>
 						<li><a href="tutoriales.html">TUTORIALES</a></li>
@@ -38,40 +45,89 @@
 					</ul>
 				</nav>
 			</div>
+
+			<aside class="sidebar">
+				<ul class="sidebar-list">
+					<li><a class="first-li" href="index.html">INICIO</a></li>
+					<li><a href="tienda.html">NUESTRO VINO</a></li>
+					<li><a href="tutoriales.html">TUTORIALES</a></li>
+					<li><a href="menu-tienda.html">NUESTRO MENÚ</a></li>
+					<li>
+						<a href="trabaja-en-tdc.html">TRABAJÁ CON NOSOTROS</a>
+					</li>
+					<li><a href="franquicias.html">FRANQUICIAS</a></li>
+					<li><a href="contacto.html">CONTACTO</a></li>
+				</ul>
+			</aside>
 		</header>
 
 		<!-- Contenido de página -->
 		<main>
 			<div>
-			<div class="franchiseAndTDC-heading">
-				<h5 class="franchiseAndTDC-subtitle">CONOCÉ TODAS LAS OPCIONES</h5>
-				<h4 class="franchiseAndTDC-title">CONVERTITE EN FRANQUICIADO</h4>
-				<DIV><hr class="franchiseAndTDC-divider-line"></DIV>
-				<P class="franchiseAndTDC-description  ">Querés ser parte de este equipo? Dejanos tus datos para recibir mas información, y nos pondremos en contacto para contarte todas las posibilidades de tu próxima franquicia Tienda de Vinos!</P>
-			</div>	
-				<form  action="">
-				<div class="containerform">
-				<div class="leftColumn no-line">
-					<label class="labelStyles" for="">Nombre</label>
-					<input class="inputStyles inputStyleFranchise" type="text" required>
-					<label class="labelStyles" for="">E-mail</label>
-					<input class="inputStyles inputStyleFranchise" type="email" required>
-					<label class="labelStyles" for="">¿Cómo llegaste a nosotros?</label>
-					<input class="inputStyles inputStyleFranchise" type="text" required>
+				<div class="franchiseAndTDC-heading">
+					<h5 class="franchiseAndTDC-subtitle">
+						CONOCÉ TODAS LAS OPCIONES
+					</h5>
+					<h4 class="franchiseAndTDC-title">CONVERTITE EN FRANQUICIADO</h4>
+					<div><hr class="franchiseAndTDC-divider-line" /></div>
+					<p class="franchiseAndTDC-description">
+						Querés ser parte de este equipo? Dejanos tus datos para
+						recibir mas información, y nos pondremos en contacto para
+						contarte todas las posibilidades de tu próxima franquicia
+						Tienda de Vinos!
+					</p>
 				</div>
-				<div class="rightColumn no-line">
-					<label class="labelStyles" for="">Apellido</label>
-					<input class="inputStyles inputStyleFranchise"  type="text" required>
-					<label class="labelStyles" for="">Teléfono</label>
-					<input class="inputStyles inputStyleFranchise" type="tel" required>
-					<label class="labelStyles" for="">¿En que zona te interesaría instalar la franquicia? </label>
-					<input class="inputStyles inputStyleFranchise" type="text" required>
-				</div>
-             </div>
-			 <div class="containerButton">
-			 <button class="buttonStyles" type="submit">ENVIAR</button>
-			</div>
-			</form>
+				<form action="">
+					<div class="containerform">
+						<div class="leftColumn no-line">
+							<label class="labelStyles" for="">Nombre</label>
+							<input
+								class="inputStyles inputStyleFranchise"
+								type="text"
+								required
+							/>
+							<label class="labelStyles" for="">E-mail</label>
+							<input
+								class="inputStyles inputStyleFranchise"
+								type="email"
+								required
+							/>
+							<label class="labelStyles" for=""
+								>¿Cómo llegaste a nosotros?</label
+							>
+							<input
+								class="inputStyles inputStyleFranchise"
+								type="text"
+								required
+							/>
+						</div>
+						<div class="rightColumn no-line">
+							<label class="labelStyles" for="">Apellido</label>
+							<input
+								class="inputStyles inputStyleFranchise"
+								type="text"
+								required
+							/>
+							<label class="labelStyles" for="">Teléfono</label>
+							<input
+								class="inputStyles inputStyleFranchise"
+								type="tel"
+								required
+							/>
+							<label class="labelStyles" for=""
+								>¿En que zona te interesaría instalar la franquicia?
+							</label>
+							<input
+								class="inputStyles inputStyleFranchise"
+								type="text"
+								required
+							/>
+						</div>
+					</div>
+					<div class="containerButton">
+						<button class="buttonStyles" type="submit">ENVIAR</button>
+					</div>
+				</form>
 			</div>
 		</main>
 
@@ -131,5 +187,15 @@
 				</p>
 			</div>
 		</footer>
+		<script>
+			// Script para abrir aside
+			const menuToggle = document.querySelector('.menu-toggle');
+			const sidebar = document.querySelector('.sidebar');
+
+			menuToggle.addEventListener('click', () => {
+				sidebar.classList.toggle('open');
+				menuToggle.classList.toggle('open');
+			});
+		</script>
 	</body>
 </html>

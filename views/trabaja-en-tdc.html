@@ -18,14 +18,21 @@
 		<!-- Navbar -->
 		<header>
 			<div class="header-container">
+				<button class="menu-toggle" aria-label="Abrir menú">
+					<span class="hamburger-icon"></span>
+				</button>
+
 				<div class="logo-container">
-					<img
-						src="../assets/img/logo.png"
-						alt="Logo Tienda de Vinos"
-						class="logo"
-					/>
+					<a href="index.html"
+						><img
+							src="../assets/img/logo.png"
+							alt="Logo Tienda de Vinos"
+							class="logo"
+						/>
+					</a>
 				</div>
-				<nav>
+
+				<nav class="nav-menu">
 					<ul class="nav-list">
 						<li><a href="tienda.html">NUESTRO VINO</a></li>
 						<li><a href="tutoriales.html">TUTORIALES</a></li>
@@ -38,6 +45,20 @@
 					</ul>
 				</nav>
 			</div>
+
+			<aside class="sidebar">
+				<ul class="sidebar-list">
+					<li><a class="first-li" href="index.html">INICIO</a></li>
+					<li><a href="tienda.html">NUESTRO VINO</a></li>
+					<li><a href="tutoriales.html">TUTORIALES</a></li>
+					<li><a href="menu-tienda.html">NUESTRO MENÚ</a></li>
+					<li>
+						<a href="trabaja-en-tdc.html">TRABAJÁ CON NOSOTROS</a>
+					</li>
+					<li><a href="franquicias.html">FRANQUICIAS</a></li>
+					<li><a href="contacto.html">CONTACTO</a></li>
+				</ul>
+			</aside>
 		</header>
 
 		<!-- Contenido de página -->
@@ -46,42 +67,78 @@
 				<div class="franchiseAndTDC-heading">
 					<h5 class="franchiseAndTDC-subtitle">SUMATE A NUESTRO EQUIPO</h5>
 					<h4 class="franchiseAndTDC-title">TRABAJÁ EN TDV</h4>
-					<DIV><hr class="franchiseAndTDC-divider-line"></DIV>
-					<P class="franchiseAndTDC-description ">Si querés formar parte de Tienda de Café envianos tu datos y adjunta tu CV</P>
-				</div>	
-					<form  action="">
+					<div><hr class="franchiseAndTDC-divider-line" /></div>
+					<p class="franchiseAndTDC-description">
+						Si querés formar parte de Tienda de Café envianos tu datos y
+						adjunta tu CV
+					</p>
+				</div>
+				<form action="">
 					<div class="containerform">
-					<div class="leftColumn no-line">
-						<label class="labelStyles" for="">Nombre</label>
-						<input class="inputStyles inputStyleFranchise" type="text" required>
-						<label class="labelStyles" for="">E-mail</label>
-						<input class="inputStyles inputStyleFranchise" type="email" required>
-						<label class="labelStyles" for="">¿Cuál es tu puesto de trabajo? 
-						</label>
-						<input class="inputStyles inputStyleFranchise" type="text" required>
+						<div class="leftColumn no-line">
+							<label class="labelStyles" for="">Nombre</label>
+							<input
+								class="inputStyles inputStyleFranchise"
+								type="text"
+								required
+							/>
+							<label class="labelStyles" for="">E-mail</label>
+							<input
+								class="inputStyles inputStyleFranchise"
+								type="email"
+								required
+							/>
+							<label class="labelStyles" for=""
+								>¿Cuál es tu puesto de trabajo?
+							</label>
+							<input
+								class="inputStyles inputStyleFranchise"
+								type="text"
+								required
+							/>
+						</div>
+						<div class="rightColumn">
+							<label class="labelStyles" for="">Apellido</label>
+							<input
+								class="inputStyles inputStyleFranchise"
+								type="text"
+								required
+							/>
+							<label class="labelStyles" for="">Teléfono</label>
+							<input
+								class="inputStyles inputStyleFranchise"
+								type="tel"
+								required
+							/>
+							<label
+								class="labelStyles"
+								style="width: 100%"
+								for="archivo"
+								>Adjuntar CV
+								<span>
+									<input
+										class="inputStyles inputStyleFranchise"
+										type="file"
+										id="archivo"
+										required
+									/>
+								</span>
+							</label>
+						</div>
+						<div class="containerMensaje">
+							<label class="labelStyles" for="">Mensaje</label>
+							<textarea
+								name=""
+								id=""
+								class="inputStyles textareaTCV"
+							></textarea>
+						</div>
 					</div>
-					<div class="rightColumn">
-						<label class="labelStyles" for="">Apellido</label>
-						<input class="inputStyles inputStyleFranchise"  type="text" required>
-						<label class="labelStyles" for="">Teléfono</label>
-						<input class="inputStyles inputStyleFranchise" type="tel" required>
-						<label class="labelStyles" style="width: 100%;" for="archivo">Adjuntar CV
-						<span >
-							<input class="inputStyles inputStyleFranchise" type="file" id="archivo" required>
-						</span>
-						</label>
-						
+					<div class="containerButton">
+						<button class="buttonStyles" type="submit">ENVIAR</button>
 					</div>
-					<div class="containerMensaje">
-						<label class="labelStyles" for="">Mensaje</label>
-						<textarea name="" id="" class="inputStyles textareaTCV" ></textarea>
-					</div>
-				 </div>
-				 <div class="containerButton">
-				 <button class="buttonStyles" type="submit">ENVIAR</button>
-				</div>
 				</form>
-				</div>
+			</div>
 		</main>
 
 		<!-- Footer -->
@@ -140,5 +197,15 @@
 				</p>
 			</div>
 		</footer>
+		<script>
+			// Script para abrir aside
+			const menuToggle = document.querySelector('.menu-toggle');
+			const sidebar = document.querySelector('.sidebar');
+
+			menuToggle.addEventListener('click', () => {
+				sidebar.classList.toggle('open');
+				menuToggle.classList.toggle('open');
+			});
+		</script>
 	</body>
 </html>

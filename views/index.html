@@ -18,14 +18,21 @@
 		<!-- Navbar -->
 		<header>
 			<div class="header-container">
+				<button class="menu-toggle" aria-label="Abrir menú">
+					<span class="hamburger-icon"></span>
+				</button>
+
 				<div class="logo-container">
-					<img
-						src="../assets/img/logo.png"
-						alt="Logo Tienda de Vinos"
-						class="logo"
-					/>
+					<a href="index.html"
+						><img
+							src="../assets/img/logo.png"
+							alt="Logo Tienda de Vinos"
+							class="logo"
+						/>
+					</a>
 				</div>
-				<nav>
+
+				<nav class="nav-menu">
 					<ul class="nav-list">
 						<li><a href="tienda.html">NUESTRO VINO</a></li>
 						<li><a href="tutoriales.html">TUTORIALES</a></li>
@@ -38,6 +45,20 @@
 					</ul>
 				</nav>
 			</div>
+
+			<aside class="sidebar">
+				<ul class="sidebar-list">
+					<li><a class="first-li" href="index.html">INICIO</a></li>
+					<li><a href="tienda.html">NUESTRO VINO</a></li>
+					<li><a href="tutoriales.html">TUTORIALES</a></li>
+					<li><a href="menu-tienda.html">NUESTRO MENÚ</a></li>
+					<li>
+						<a href="trabaja-en-tdc.html">TRABAJÁ CON NOSOTROS</a>
+					</li>
+					<li><a href="franquicias.html">FRANQUICIAS</a></li>
+					<li><a href="contacto.html">CONTACTO</a></li>
+				</ul>
+			</aside>
 		</header>
 
 		<!-- Contenido de página -->
@@ -99,134 +120,255 @@
 				<div class="line"></div>
 				<div class="slider-container">
 					<div class="slider-wrapper">
-						<div class="card">
-							<div class="card-content">
-								<img
-									src="../assets/img/vino-1.jpg"
-									alt="Producto 1"
-									class="card-image"
-								/>
-								<div class="info">
-									<h3>Vino Tinto</h3>
-									<p>Descripción del producto 1</p>
+						<div class="tienda-product-container">
+							<div class="tienda-product">
+								<div class="tienda-product-top">
+									<a href="#" class="tienda-image-link">
+										<img
+											src="../assets/img/vino-11.jpg"
+											alt="D.V. Catena"
+											class="tienda-main-image"
+										/>
+									</a>
+									<div class="tienda-hover-img">
+										<a href="#">
+											<img
+												src="../assets/img/descripcion-vino-11.jpg"
+												alt="Descripción del producto"
+											/>
+										</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="card">
-							<div class="card-content">
-								<img
-									src="../assets/img/vino-2.jpg"
-									alt="Producto 2"
-									class="card-image"
-								/>
-								<div class="info">
-									<h3>Vino Blanco</h3>
-									<p>Descripción del producto 2</p>
-								</div>
+							<div class="tienda-names">
+								<h3><a href="#">D.V. Catena - Malbec - Malbec</a></h3>
 							</div>
 						</div>
-						<div class="card">
-							<div class="card-content">
-								<img
-									src="../assets/img/vino-3.jpg"
-									alt="Producto 3"
-									class="card-image"
-								/>
-								<div class="info">
-									<h3>Vino Blanco</h3>
-									<p>Descripción del producto 2</p>
+
+						<div class="tienda-product-container">
+							<div class="tienda-product">
+								<div class="tienda-product-top">
+									<a href="#" class="tienda-image-link">
+										<img
+											src="../assets/img/vino-2.jpg"
+											alt="Viñas de Alvear"
+											class="tienda-main-image"
+										/>
+									</a>
+									<div class="tienda-hover-img">
+										<a href="#">
+											<img
+												src="../assets/img/descripcion-vino-2.jpg"
+												alt="Descripción del producto"
+											/>
+										</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="card">
-							<div class="card-content">
-								<img
-									src="../assets/img/vino-4.jpg"
-									alt="Producto 4"
-									class="card-image"
-								/>
-								<div class="info">
-									<h3>Vino Blanco</h3>
-									<p>Descripción del producto 2</p>
-								</div>
+							<div class="tienda-names">
+								<h3><a href="#">Viñas de Alvear - Clásico Tinto</a></h3>
 							</div>
 						</div>
-						<div class="card">
-							<div class="card-content">
-								<img
-									src="../assets/img/vino-5.jpg"
-									alt="Producto 5"
-									class="card-image"
-								/>
-								<div class="info">
-									<h3>Vino Blanco</h3>
-									<p>Descripción del producto 2</p>
+
+						<div class="tienda-product-container">
+							<div class="tienda-product">
+								<div class="tienda-product-top">
+									<a href="#" class="tienda-image-link">
+										<img
+											src="../assets/img/vino-3.jpg"
+											alt="Buenos Aires"
+											class="tienda-main-image"
+										/>
+									</a>
+									<div class="tienda-hover-img">
+										<a href="#">
+											<img
+												src="../assets/img/descripcion-vino-3.jpg"
+												alt="Descripción del producto"
+											/>
+										</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="card">
-							<div class="card-content">
-								<img
-									src="../assets/img/vino-6.jpg"
-									alt="Producto 6"
-									class="card-image"
-								/>
-								<div class="info">
-									<h3>Vino Blanco</h3>
-									<p>Descripción del producto 2</p>
-								</div>
+							<div class="tienda-names">
+								<h3><a href="#">Buenos Aires - Malbec</a></h3>
 							</div>
 						</div>
-						<div class="card">
-							<div class="card-content">
-								<img
-									src="../assets/img/vino-7.jpg"
-									alt="Producto 7"
-									class="card-image"
-								/>
-								<div class="info">
-									<h3>Vino Blanco</h3>
-									<p>Descripción del producto 2</p>
+
+						<div class="tienda-product-container">
+							<div class="tienda-product">
+								<div class="tienda-product-top">
+									<a href="#" class="tienda-image-link">
+										<img
+											src="../assets/img/vino-4.jpg"
+											alt="El Enemigo"
+											class="tienda-main-image"
+										/>
+									</a>
+									<div class="tienda-hover-img">
+										<a href="#">
+											<img
+												src="../assets/img/descripcion-vino-4.jpg"
+												alt="Descripción del producto"
+											/>
+										</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="card">
-							<div class="card-content">
-								<img
-									src="../assets/img/vino-8.jpg"
-									alt="Producto 8"
-									class="card-image"
-								/>
-								<div class="info">
-									<h3>Vino Blanco</h3>
-									<p>Descripción del producto 2</p>
-								</div>
+							<div class="tienda-names">
+								<h3><a href="#">El Enemigo - Malbec</a></h3>
 							</div>
 						</div>
-						<div class="card">
-							<div class="card-content">
-								<img
-									src="../assets/img/vino-9.jpg"
-									alt="Producto 9"
-									class="card-image"
-								/>
-								<div class="info">
-									<h3>Vino Blanco</h3>
-									<p>Descripción del producto 2</p>
+
+						<div class="tienda-product-container">
+							<div class="tienda-product">
+								<div class="tienda-product-top">
+									<a href="#" class="tienda-image-link">
+										<img
+											src="../assets/img/vino-5.jpg"
+											alt="Novecento"
+											class="tienda-main-image"
+										/>
+									</a>
+									<div class="tienda-hover-img">
+										<a href="#">
+											<img
+												src="../assets/img/descripcion-vino-5.jpg"
+												alt="Descripción del producto"
+											/>
+										</a>
+									</div>
 								</div>
 							</div>
+							<div class="tienda-names">
+								<h3><a href="#">Novecento - Malbec</a></h3>
+							</div>
 						</div>
-						<div class="card">
-							<div class="card-content">
-								<img
-									src="../assets/img/vino-10.jpg"
-									alt="Producto 10"
-									class="card-image"
-								/>
-								<div class="info">
-									<h3>Vino Blanco</h3>
-									<p>Descripción del producto 2</p>
+
+						<div class="tienda-product-container">
+							<div class="tienda-product">
+								<div class="tienda-product-top">
+									<a href="#" class="tienda-image-link">
+										<img
+											src="../assets/img/vino-6.jpg"
+											alt="Don Valentín"
+											class="tienda-main-image"
+										/>
+									</a>
+									<div class="tienda-hover-img">
+										<a href="#">
+											<img
+												src="../assets/img/descripcion-vino-6.jpg"
+												alt="Descripción del producto"
+											/>
+										</a>
+									</div>
 								</div>
+							</div>
+							<div class="tienda-names">
+								<h3>
+									<a href="#">Don Valentín - Cabernet Sauvignon</a>
+								</h3>
+							</div>
+						</div>
+
+						<div class="tienda-product-container">
+							<div class="tienda-product">
+								<div class="tienda-product-top">
+									<a href="#" class="tienda-image-link">
+										<img
+											src="../assets/img/vino-7.jpg"
+											alt="Cantus"
+											class="tienda-main-image"
+										/>
+									</a>
+									<div class="tienda-hover-img">
+										<a href="#">
+											<img
+												src="../assets/img/descripcion-vino-7.jpg"
+												alt="Descripción del producto"
+											/>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="tienda-names">
+								<h3><a href="#">Cantus - Malbec</a></h3>
+							</div>
+						</div>
+
+						<div class="tienda-product-container">
+							<div class="tienda-product">
+								<div class="tienda-product-top">
+									<a href="#" class="tienda-image-link">
+										<img
+											src="../assets/img/vino-8.jpg"
+											alt="Rutini"
+											class="tienda-main-image"
+										/>
+									</a>
+									<div class="tienda-hover-img">
+										<a href="#">
+											<img
+												src="../assets/img/descripcion-vino-8.jpg"
+												alt="Descripción del producto"
+											/>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="tienda-names">
+								<h3><a href="#">Rutini - Cabernet - Malbec</a></h3>
+							</div>
+						</div>
+
+						<div class="tienda-product-container">
+							<div class="tienda-product">
+								<div class="tienda-product-top">
+									<a href="#" class="tienda-image-link">
+										<img
+											src="../assets/img/vino-9.jpg"
+											alt="Trumpeter"
+											class="tienda-main-image"
+										/>
+									</a>
+									<div class="tienda-hover-img">
+										<a href="#">
+											<img
+												src="../assets/img/descripcion-vino-9.jpg"
+												alt="Descripción del producto"
+											/>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="tienda-names">
+								<h3><a href="#">Trumpeter - Malbec</a></h3>
+							</div>
+						</div>
+
+						<div class="tienda-product-container">
+							<div class="tienda-product">
+								<div class="tienda-product-top">
+									<a href="#" class="tienda-image-link">
+										<img
+											src="../assets/img/vino-10.jpg"
+											alt="Bianchi"
+											class="tienda-main-image"
+										/>
+									</a>
+									<div class="tienda-hover-img">
+										<a href="#">
+											<img
+												src="../assets/img/descripcion-vino-10.jpg"
+												alt="Descripción del producto"
+											/>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="tienda-names">
+								<h3><a href="#">Bianchi - Malbec</a></h3>
 							</div>
 						</div>
 					</div>
@@ -413,6 +555,15 @@
 		</footer>
 
 		<script>
+			// Script para abrir aside
+			const menuToggle = document.querySelector('.menu-toggle');
+			const sidebar = document.querySelector('.sidebar');
+
+			menuToggle.addEventListener('click', () => {
+				sidebar.classList.toggle('open');
+				menuToggle.classList.toggle('open');
+			});
+
 			// Script para el Banner
 			document.addEventListener('DOMContentLoaded', function () {
 				let slideIndex = 0;
@@ -462,7 +613,7 @@
 				});
 			});
 
-			// // Script para el slider de productos
+			// Script para el slider de productos
 			let productSlideIndex = 0;
 			const productsPerPage = 5;
 			const totalProducts = 10;

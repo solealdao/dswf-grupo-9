@@ -18,14 +18,21 @@
 		<!-- Navbar -->
 		<header>
 			<div class="header-container">
+				<button class="menu-toggle" aria-label="Abrir menú">
+					<span class="hamburger-icon"></span>
+				</button>
+
 				<div class="logo-container">
-					<img
-						src="../assets/img/logo.png"
-						alt="Logo Tienda de Vinos"
-						class="logo"
-					/>
+					<a href="index.html"
+						><img
+							src="../assets/img/logo.png"
+							alt="Logo Tienda de Vinos"
+							class="logo"
+						/>
+					</a>
 				</div>
-				<nav>
+
+				<nav class="nav-menu">
 					<ul class="nav-list">
 						<li><a href="tienda.html">NUESTRO VINO</a></li>
 						<li><a href="tutoriales.html">TUTORIALES</a></li>
@@ -38,67 +45,107 @@
 					</ul>
 				</nav>
 			</div>
+
+			<aside class="sidebar">
+				<ul class="sidebar-list">
+					<li><a class="first-li" href="index.html">INICIO</a></li>
+					<li><a href="tienda.html">NUESTRO VINO</a></li>
+					<li><a href="tutoriales.html">TUTORIALES</a></li>
+					<li><a href="menu-tienda.html">NUESTRO MENÚ</a></li>
+					<li>
+						<a href="trabaja-en-tdc.html">TRABAJÁ CON NOSOTROS</a>
+					</li>
+					<li><a href="franquicias.html">FRANQUICIAS</a></li>
+					<li><a href="contacto.html">CONTACTO</a></li>
+				</ul>
+			</aside>
 		</header>
 
-<!-- Contenido de la pagina -->
-<main>
-	<div class="containerform">
-		<div class="leftColumn padding-vertical">
-			<div>
-				<div class="titleContainer">
-					<div class="h4Container">
-						<h4 class="contactTitle">COMUNICATE CON NOSOTROS</h4>
+		<!-- Contenido de la pagina -->
+		<main>
+			<div class="containerform">
+				<div class="leftColumn padding-vertical">
+					<div>
+						<div class="titleContainer">
+							<div class="h4Container">
+								<h4 class="contactTitle">COMUNICATE CON NOSOTROS</h4>
+							</div>
+							<div class="lineContainer">
+								<hr class="hrStyles" />
+							</div>
+						</div>
+						<div>
+							<p class="paragraphStyles">
+								Ante cualquier consulta no dudes en comunicarte. Dejá
+								tus datos y consulta utilizando el formulario a
+								continuación y nos contactaremos a la brevedad.
+							</p>
+						</div>
+						<div>
+							<form class="form">
+								<label class="labelStyles" for="nombre">Nombre</label>
+								<input
+									class="inputStyles"
+									type="text"
+									id="nombre"
+									required
+								/>
+
+								<label class="labelStyles" for="email">E-mail</label>
+								<input
+									class="inputStyles"
+									type="email"
+									id="email"
+									required
+								/>
+
+								<label class="labelStyles" for="asunto">Asunto</label>
+								<input
+									class="inputStyles"
+									type="text"
+									id="asunto"
+									required
+								/>
+
+								<label class="labelStyles" for="mensaje">Mensaje</label>
+								<textarea
+									name=""
+									id=""
+									class="inputStyles textareaTCV"
+								></textarea>
+
+								<button class="buttonStyles" type="submit">
+									ENVIAR
+								</button>
+							</form>
+						</div>
 					</div>
-					<div class="lineContainer">
-						<hr class="hrStyles">
+				</div>
+
+				<div class="rightColumn padding-vertical">
+					<div class="titleContainer">
+						<div class="h4Container">
+							<h4 class="contactTitle">NUESTRAS REDES SOCIALES</h4>
+						</div>
+						<div class="lineContainer">
+							<hr class="hrStyles" />
+						</div>
+					</div>
+					<div style="padding-top: 1em">
+						<div>
+							<span
+								class="vc_icon_element-icon fab fa-facebook iconStyles"
+							></span>
+						</div>
+						<div>
+							<span
+								class="vc_icon_element-icon fab fa-instagram vc_icon_element-instagram iconStyles"
+							></span>
+						</div>
 					</div>
 				</div>
-				<div>
-					<p class="paragraphStyles">
-						Ante cualquier consulta no dudes en comunicarte. Dejá tus datos y consulta
-						utilizando el formulario a continuación y nos contactaremos a la brevedad.
-					</p>
-				</div>
-				<div>
-					<form class="form">
-						<label class="labelStyles" for="nombre">Nombre</label>
-						<input class="inputStyles" type="text" id="nombre" required>
-						
-						<label class="labelStyles" for="email">E-mail</label>
-						<input class="inputStyles" type="email" id="email" required>
-						
-						<label class="labelStyles" for="asunto">Asunto</label>
-						<input class="inputStyles" type="text" id="asunto" required>
-						
-						<label class="labelStyles" for="mensaje">Mensaje</label>
-						<textarea name="" id="" class="inputStyles textareaTCV"></textarea>
-						
-						<button class="buttonStyles" type="submit">ENVIAR</button>
-					</form>
-				</div>
 			</div>
-		</div>
-		
-		<div class="rightColumn padding-vertical">
-			<div class="titleContainer">
-				<div class="h4Container">
-					<h4 class="contactTitle">NUESTRAS REDES SOCIALES</h4>
-				</div>
-				<div class="lineContainer">
-					<hr class="hrStyles">
-				</div>
-			</div>
-			<div style="padding-top: 1em;">
-				<div> 
-					<span class="vc_icon_element-icon fab fa-facebook iconStyles"></span>
-				</div>
-				<div>
-					<span class="vc_icon_element-icon fab fa-instagram vc_icon_element-instagram iconStyles"></span>
-				</div>
-			</div>
-		</div>
-	</div>
-</main>
+		</main>
 
 		<!-- Footer -->
 		<footer>
@@ -156,5 +203,15 @@
 				</p>
 			</div>
 		</footer>
+		<script>
+			// Script para abrir aside
+			const menuToggle = document.querySelector('.menu-toggle');
+			const sidebar = document.querySelector('.sidebar');
+
+			menuToggle.addEventListener('click', () => {
+				sidebar.classList.toggle('open');
+				menuToggle.classList.toggle('open');
+			});
+		</script>
 	</body>
 </html>

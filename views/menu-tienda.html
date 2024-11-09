@@ -18,14 +18,21 @@
 		<!-- Navbar -->
 		<header>
 			<div class="header-container">
+				<button class="menu-toggle" aria-label="Abrir menú">
+					<span class="hamburger-icon"></span>
+				</button>
+
 				<div class="logo-container">
-					<img
-						src="../assets/img/logo.png"
-						alt="Logo Tienda de Vinos"
-						class="logo"
-					/>
+					<a href="index.html"
+						><img
+							src="../assets/img/logo.png"
+							alt="Logo Tienda de Vinos"
+							class="logo"
+						/>
+					</a>
 				</div>
-				<nav>
+
+				<nav class="nav-menu">
 					<ul class="nav-list">
 						<li><a href="tienda.html">NUESTRO VINO</a></li>
 						<li><a href="tutoriales.html">TUTORIALES</a></li>
@@ -38,6 +45,20 @@
 					</ul>
 				</nav>
 			</div>
+
+			<aside class="sidebar">
+				<ul class="sidebar-list">
+					<li><a class="first-li" href="index.html">INICIO</a></li>
+					<li><a href="tienda.html">NUESTRO VINO</a></li>
+					<li><a href="tutoriales.html">TUTORIALES</a></li>
+					<li><a href="menu-tienda.html">NUESTRO MENÚ</a></li>
+					<li>
+						<a href="trabaja-en-tdc.html">TRABAJÁ CON NOSOTROS</a>
+					</li>
+					<li><a href="franquicias.html">FRANQUICIAS</a></li>
+					<li><a href="contacto.html">CONTACTO</a></li>
+				</ul>
+			</aside>
 		</header>
 
 		<!-- Contenido de página -->
@@ -101,5 +122,15 @@
 				</p>
 			</div>
 		</footer>
+		<script>
+			// Script para abrir aside
+			const menuToggle = document.querySelector('.menu-toggle');
+			const sidebar = document.querySelector('.sidebar');
+
+			menuToggle.addEventListener('click', () => {
+				sidebar.classList.toggle('open');
+				menuToggle.classList.toggle('open');
+			});
+		</script>
 	</body>
 </html>
