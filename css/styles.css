@@ -4,6 +4,7 @@
 	--color-primary: #595959;
 	--color-secondary: #c7a17a;
 	--color-background: #f0f0f0;
+	--color-background-mid: #dddddd;
 	--color-background-dark: #111111;
 	--color-border-light: #dcdbdb;
 	--color-text-light: #ffffff;
@@ -816,10 +817,10 @@ input:focus {
 }
 .franchiseAndTDC-divider-line {
 	border: none;
-	height: 2px; /* Ajusta el grosor de la línea */
+	height: 2px;
 	background-color: var(--color-secondary);
-	width: 115px; /* Ajusta el ancho de la línea */
-	margin: 10px auto; /* Centra la línea horizontalmente y ajusta el espacio alrededor */
+	width: 115px;
+	margin: 10px auto;
 }
 .franchiseAndTDC-description {
 	margin: 30px auto 40px;
@@ -842,6 +843,98 @@ input:focus {
 }
 
 /*///////////////// ESTILOS PÁGINA MENÚ-TIENDA//////////////////*/
+/* Sección Banner */
+.banner-text {
+	position: absolute;
+	top: 20%;
+	left: 10%;
+	color: var(--color-text-light);
+	max-width: 400px;
+}
+
+.banner-title {
+	font-family: var(--font-title);
+	font-weight: 100;
+	font-size: 2em;
+}
+
+.banner-title-2 {
+	font-family: var(--font-title);
+	font-weight: 600;
+	margin: 0;
+	font-size: 4em;
+}
+
+.banner-text h3 {
+	font-family: var(--font-body);
+}
+
+/* Sección Galería */
+.gallery-container {
+	display: flex;
+	justify-content: center;
+	padding: 2em 6em;
+}
+
+.gallery-column {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	margin: 0 auto;
+	width: 46%;
+}
+
+.image-container {
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+}
+
+.image-container img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+	display: block;
+}
+
+.image-container:hover img {
+	transform: scale(1.1);
+}
+
+/* Sección Menú */
+.wine-menu-container {
+	background-color: var(--color-background-mid);
+	padding: 2em 6em;
+	margin: 0 6em;
+}
+
+.wine-menu-container h2 {
+	font-family: var(--font-title);
+	font-size: 2em;
+	color: var(--color-text-dark);
+	text-align: center;
+	margin: 2em 0;
+}
+
+.wine-menu-image-container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.menu-image {
+	flex: 1 1 15%;
+	margin: 0.5em;
+	max-width: 18%;
+}
+
+.menu-image img {
+	width: 100%;
+	height: auto;
+}
 
 /*///////////////// ESTILOS PÁGINA TIENDA//////////////////*/
 
@@ -1120,10 +1213,22 @@ hr {
 	.tienda-names {
 		width: 80%;
 	}
-}
-.inputStyles {
-	margin-bottom: 30px;
-	height: 42px;
+
+	.inputStyles {
+		margin-bottom: 30px;
+		height: 42px;
+	}
+
+	/* Sección Galería */
+	.gallery-container {
+		padding: 1.5em 3em;
+	}
+
+	/* Sección Menú */
+	.wine-menu-container {
+		padding: 2em 3em;
+		margin: 0 3em;
+	}
 }
 
 /*----- Tablet vertical ------*/
@@ -1441,6 +1546,28 @@ hr {
 	.tutorial-information a {
 		font-size: 0.92em;
 	}
+
+	/*--- Menú-tienda ---*/
+	.banner-text {
+		top: 35%;
+	}
+
+	.banner-title-2 {
+		font-size: 2.5em;
+	}
+
+	.gallery {
+		grid-template-columns: 1fr;
+	}
+
+	/* Sección Galería */
+	.gallery-container {
+		flex-direction: column;
+		padding: 1em 1.8em;
+	}
+	.gallery-column {
+		width: 80%;
+	}
 }
 
 /*----- Móvil 1 -----*/
@@ -1490,6 +1617,12 @@ hr {
 	.tutorial-information a {
 		font-size: 0.57em;
 	}
+
+	/* Sección Menú */
+	.wine-menu-container {
+		padding: 1em 1.5em;
+		margin: 0 1.5em;
+	}
 }
 
 /*----- Móvil 2 -----*/
@@ -1524,5 +1657,10 @@ hr {
 	}
 	.tutorial-information a {
 		font-size: 0.46em;
+	}
+
+	/*--- Menú-tienda ---*/
+	.banner-text {
+		top: 50%;
 	}
 }

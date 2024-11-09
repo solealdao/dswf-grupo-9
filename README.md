@@ -51,3 +51,9 @@ Para clonar el repositorio en Github:
 ```
 git clone git@github.com:solealdao/dswf-grupo-9.git
 ```
+
+## Link a Trello
+
+Trabajamos con metodologías ágiles, utilizamos un tablero en Trello para organizarnos y repartirnos las tareas.
+
+https://trello.com/b/iTNc41fC/frontend-grupo-9
