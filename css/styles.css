@@ -715,6 +715,7 @@ footer {
 }
 .labelStyles {
 	color: var(--color-primary);
+	font-family: var(--font-body);
 }
 
 .inputStyles {
